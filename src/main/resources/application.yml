@@ -70,6 +70,12 @@ spring:
           destination: covid
           contentType: application/json
 
+hystrix:
+  command:
+    # 전역설정
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 610
+
 api:
   url:
     diagnosis: http://diagnosis:8080
